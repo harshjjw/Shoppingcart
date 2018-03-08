@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>
+		Online Shopping Cart
+	</title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <style type="text/css">  
+    	body
+    	{
+    		background-color: #EAAF14
+    	}
+    	button
+    	{
+    		margin-right: 20px;
+    	}
+        
+        #c1
+        {
+        	margin-bottom: 10px;
+        }
+
+    </style>
+    <script src="Shoppingcart.js"></script>
+</head>
+<body>
+	<div ng-app="Shoppingcart" ng-controller="CartController">
+		<div style="padding-top: 300px">
+			<center>
+				<label> Name: </label>
+					<input type="" ng-model ="a"><br>
+				<h2> Welcome {{a}}</h2>
+				<!--label> Number2: </label>
+					<input type="" ng-model ="b"-->
+				<div class="row mx-auto" style="padding-top: 20px">
+					<div class="col">
+					  <button type="button" class="btn btn-indigo" ng-click="sta()" id="c1">Stationery</button><br>
+					  	<label> Quantity: </label>
+					  	<input type="number" ng-model ="f1">
+					  	<label>Price: </label>
+                    	<input ng-model="price1"/><br>
+					  <button type="button" class="btn btn-indigo" ng-click="clo()" id="c1">Clothes</button><br>
+					  	<label> Quantity: </label>
+						<input type="number" ng-model ="f2">
+						<label>Price: </label>
+                    	<input ng-model="price2"/><br>
+					  <button type="button" class="btn btn-indigo" ng-click="mob()" id="c1">Mobiles</button><br>
+					  	<label> Quantity: </label>
+						<input type="number" ng-model ="f3">
+						<label>Price: </label>
+                    	<input ng-model="price3"/><br>
+					  <button type="button" class="btn btn-indigo" ng-click="lap()" id="c1">Laptops</button><br>
+					  	<label> Quantity: </label>
+						<input type="number" ng-model ="f4">
+						<label>Price: </label>
+                    	<input ng-model="price4"/><br>
+					</div>
+					
+				</div>
+				<div class="row" style="padding-top: 20px" >
+                	<div class="col">
+                    	<label>Final Price: {{add()}} </label>
+                    	<input ng-model="totalP"/>
+                	</div>
+            	</div>
+			</center>
+		</div>
+	</div>
+
+</body>
+</html>
